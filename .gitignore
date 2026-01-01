@@ -1,0 +1,20 @@
+# Compiled executable
+array_operations
+
+# Object files
+*.o
+*.obj
+
+# Temporary files
+*~
+*.swp
+*.swo
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
