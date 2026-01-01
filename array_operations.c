@@ -135,6 +135,9 @@ void displayArray(int arr[], int size) {
  * Returns: The minimum value found
  */
 int findMinimum(int arr[], int size) {
+    if(size <= 0) {
+        return 0;  // Return 0 for invalid size (defensive programming)
+    }
     int min = arr[0];
     for(int i = 1; i < size; i++) {
         if(arr[i] < min) {
@@ -151,6 +154,9 @@ int findMinimum(int arr[], int size) {
  * Returns: The maximum value found
  */
 int findMaximum(int arr[], int size) {
+    if(size <= 0) {
+        return 0;  // Return 0 for invalid size (defensive programming)
+    }
     int max = arr[0];
     for(int i = 1; i < size; i++) {
         if(arr[i] > max) {
@@ -167,7 +173,10 @@ int findMaximum(int arr[], int size) {
  * Returns: The average value as a double
  */
 double calculateAverage(int arr[], int size) {
-    int sum = 0;
+    if(size <= 0) {
+        return 0.0;  // Return 0.0 for invalid size (defensive programming)
+    }
+    long long sum = 0;  // Use long long to prevent integer overflow
     for(int i = 0; i < size; i++) {
         sum += arr[i];
     }
